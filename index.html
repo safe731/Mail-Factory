@@ -1938,14 +1938,7 @@ const validTabs = ['home','history','sellers','profile','exchange_step'];
 function switchTab(tabId, pushState = true) {
     if (!validTabs.includes(tabId)) tabId = 'home';
 
-    // 👉 HASH routing use (GitHub fix)
-    if (pushState) {
-        const url = tabId === 'home' ? '#/' : '#/' + tabId;
-        if (location.hash !== url) {
-            window.location.hash = url;
-            return; // hashchange handle করবে
-        }
-    }
+
 </script>
 
 </body>
